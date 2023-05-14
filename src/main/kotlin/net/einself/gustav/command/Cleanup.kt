@@ -1,6 +1,6 @@
-package command
+package net.einself.gustav.command
 
-import parser.Parser
+import net.einself.gustav.parser.Parser
 import java.io.File
 
 class Cleanup(private val parser: Parser) : Command() {

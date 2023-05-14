@@ -1,7 +1,7 @@
-package command
+package net.einself.gustav.command
 
-import calculator.Calculator
-import parser.Parser
+import net.einself.gustav.calculator.Calculator
+import net.einself.gustav.parser.Parser
 import java.io.File
 
 class Verify(

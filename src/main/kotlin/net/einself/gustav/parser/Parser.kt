@@ -1,4 +1,4 @@
-package parser
+package net.einself.gustav.parser
 
 interface Parser {
 

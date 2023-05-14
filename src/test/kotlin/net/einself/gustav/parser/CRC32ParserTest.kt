@@ -1,4 +1,4 @@
-package parser
+package net.einself.gustav.parser
 
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.DisplayName

@@ -1,6 +1,6 @@
-package command
+package net.einself.gustav.command
 
-import calculator.Calculator
+import net.einself.gustav.calculator.Calculator
 import java.io.File
 
 class Create(private val calculator: Calculator) : Command() {

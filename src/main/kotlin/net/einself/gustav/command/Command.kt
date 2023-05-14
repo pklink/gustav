@@ -1,4 +1,4 @@
-package command
+package net.einself.gustav.command
 
 import com.github.ajalt.clikt.core.CliktCommand
 import com.github.ajalt.clikt.parameters.arguments.argument

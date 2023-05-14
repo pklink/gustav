@@ -1,13 +1,15 @@
-import calculator.CRC32Calculator
+package net.einself.gustav
+
 import com.github.ajalt.clikt.core.CliktCommand
 import com.github.ajalt.clikt.core.subcommands
-import command.Cleanup
-import command.Create
-import command.Verify
-import parser.CRC32Parser
+import net.einself.gustav.calculator.CRC32Calculator
+import net.einself.gustav.command.Cleanup
+import net.einself.gustav.command.Create
+import net.einself.gustav.command.Verify
+import net.einself.gustav.parser.CRC32Parser
 
 class App : CliktCommand(name = "gustav") {
-    override fun run()= Unit
+    override fun run() = Unit
 }
 
 fun main(args: Array<String>) {

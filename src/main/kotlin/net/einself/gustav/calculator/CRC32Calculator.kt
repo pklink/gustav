@@ -1,4 +1,4 @@
-package calculator
+package net.einself.gustav.calculator
 
 import java.io.File
 import java.util.zip.CRC32
