@@ -9,10 +9,3 @@ fun calculateChecksum(file: File): String {
         .value.toString(16)
 }
 
-
-fun parseChecksum(name: String): String? {
-    val regex = "-([a-z0-9_]+)".toRegex()
-    return regex.find(name)?.groupValues
-        ?.filter { it.length >= 2 }
-        ?.let { it[1] }
-}

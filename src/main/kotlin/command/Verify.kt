@@ -1,16 +1,16 @@
 package command
 
+import parser.Parser
 import util.calculateChecksum
-import util.parseChecksum
 import java.io.File
 
-class Verify : Command() {
+class Verify(private val parser: Parser) : Command() {
     override fun run() {
         files(path).forEach { verify(it) }
     }
 
     private fun verify(file: File) {
-        val givenChecksum = parseChecksum(file.nameWithoutExtension)
+        val givenChecksum = parser.parse(file.nameWithoutExtension)
         if (givenChecksum.isNullOrBlank()) {
             println("Cannot find checksum")
             return
