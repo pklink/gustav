@@ -7,9 +7,9 @@
 ## Using
 
 ```
-gustav create /foo/bar/
-gustav verify /foo/bar/
-gustav cleanup /foo/bar/
+java -jar gustav.jar create /foo/bar/
+java -jar gustav.jar verify /foo/bar/
+java -jar gustav.jar cleanup /foo/bar/
 ```
 
 ```
