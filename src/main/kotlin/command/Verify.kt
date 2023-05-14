@@ -1,10 +1,13 @@
 package command
 
+import calculator.Calculator
 import parser.Parser
-import util.calculateChecksum
 import java.io.File
 
-class Verify(private val parser: Parser) : Command() {
+class Verify(
+    private val calculator: Calculator,
+    private val parser: Parser
+) : Command() {
     override fun run() {
         files(path).forEach { verify(it) }
     }
@@ -16,7 +19,7 @@ class Verify(private val parser: Parser) : Command() {
             return
         }
 
-        val checksum = calculateChecksum(file)
+        val checksum = calculator.calculate(file)
         if (checksum == givenChecksum) {
             println("${file.nameWithoutExtension} - OK")
         } else {

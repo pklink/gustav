@@ -1,3 +1,4 @@
+import calculator.CRC32Calculator
 import com.github.ajalt.clikt.core.CliktCommand
 import com.github.ajalt.clikt.core.subcommands
 import command.Cleanup
@@ -11,7 +12,12 @@ class App : CliktCommand(name = "gustav") {
 
 fun main(args: Array<String>) {
     val crC32Parser = CRC32Parser()
-    App().subcommands(Cleanup(crC32Parser), Create(), Verify(crC32Parser)).main(args)
+    val crC32Calculator = CRC32Calculator()
+    App().subcommands(
+        Cleanup(crC32Parser),
+        Create(crC32Calculator),
+        Verify(crC32Calculator, crC32Parser)
+    ).main(args)
 }
 
 
