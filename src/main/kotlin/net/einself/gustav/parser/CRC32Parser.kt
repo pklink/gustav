@@ -9,6 +9,6 @@ class CRC32Parser: Parser {
     }
 
     companion object {
-        val REGEX = "-([a-z0-9_]+)".toRegex()
+        val REGEX = "-([a-z0-9_]{8}$)".toRegex()
     }
 }

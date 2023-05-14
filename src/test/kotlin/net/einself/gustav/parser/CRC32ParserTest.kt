@@ -24,16 +24,18 @@ class CRC32ParserTest {
 
     @ParameterizedTest
     @DisplayName("Should not find CRC32 hash in filename")
-    @ValueSource(strings = [
-        "foo-123456789",
-        "foo12345678",
-        "foo",
-        "foo",
-        "foo-ABCDEFGH",
-        "foo-äääääääµ",
-    ])
-    fun notSoHappy() {
-        val result = underTest.parse("12345678")
+    @ValueSource(
+        strings = [
+            "foo-123456789",
+            "foo12345678",
+            "foo",
+            "foo",
+            "foo-ABCDEFGH",
+            "foo-äääääääµ",
+        ]
+    )
+    fun notSoHappy(filename: String) {
+        val result = underTest.parse(filename)
         assertNull(result)
     }
 }
