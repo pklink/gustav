@@ -1,3 +1,3 @@
 
-rootProject.name = "checksum-renamer"
+rootProject.name = "gustav"
 
