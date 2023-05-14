@@ -13,6 +13,7 @@ repositories {
 dependencies {
     implementation("com.github.ajalt.clikt:clikt:3.5.2")
     testImplementation(kotlin("test"))
+    testImplementation("org.junit.jupiter:junit-jupiter:5.9.3")
 }
 
 tasks.test {
