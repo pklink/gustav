@@ -12,6 +12,7 @@ class Cleanup(private val parser: Parser) : Command() {
         val checksum = parser.parse(file.nameWithoutExtension)
         val nameWithoutExtension = file.nameWithoutExtension.replace("-$checksum", "", true)
         val newName = "${file.parentFile.absolutePath}/$nameWithoutExtension.${file.extension}"
+        println("${file.name} -> $nameWithoutExtension.${file.extension}")
         file.renameTo(File(newName))
     }
 }

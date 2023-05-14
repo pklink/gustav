@@ -21,9 +21,9 @@ class Verify(
 
         val checksum = calculator.calculate(file)
         if (checksum == givenChecksum) {
-            println("${file.nameWithoutExtension} - OK")
+            println("${file.name} - OK")
         } else {
-            println("${file.nameWithoutExtension} - NOK (given: $givenChecksum, current: $checksum)")
+            println("${file.name} - NOK (given: $givenChecksum, current: $checksum)")
         }
     }
 

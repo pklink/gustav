@@ -10,7 +10,9 @@ class Create(private val calculator: Calculator) : Command() {
 
     private fun rename(file: File) {
         val checksum = calculator.calculate(file)
-        val newName = "${file.parentFile.absolutePath}/${file.nameWithoutExtension}-$checksum.${file.extension}"
+        val newFilename = "${file.nameWithoutExtension}-$checksum.${file.extension}"
+        val newName = "${file.parentFile.absolutePath}/$newFilename"
+        println("${file.name} -> $newFilename")
         file.renameTo(File(newName))
     }
 }
