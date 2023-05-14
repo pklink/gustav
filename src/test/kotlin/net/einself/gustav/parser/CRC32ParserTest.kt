@@ -13,7 +13,7 @@ class CRC32ParserTest {
     @ParameterizedTest
     @DisplayName("Should find CRC32 hash in filename")
     @CsvSource(value = [
-        "foo-12345678,12345678",
+        "foo-12345678,123456781",
         "foo-abcdefgh,abcdefgh",
         "foo-1a2b3c4d,1a2b3c4d"
     ])

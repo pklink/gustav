@@ -11,5 +11,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Run test task
+      - name: Run :test task
         run: ./gradlew test
